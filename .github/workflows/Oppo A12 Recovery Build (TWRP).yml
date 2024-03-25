@@ -48,7 +48,7 @@ on:
         description: Include recovery installer zip
         type: boolean
         required: true
-        default: false
+        default: true
 
 jobs:
   build:
