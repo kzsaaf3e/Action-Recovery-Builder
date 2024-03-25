@@ -1,4 +1,4 @@
-name: Recovery Build
+name: CPH2083 ( Oppo A12 ) Recovery Build
 
 on:
   workflow_dispatch:
@@ -14,7 +14,7 @@ on:
         - 7.1
         - 6.0
         required: true
-        default: 12.1
+        default: 9.0
       DEVICE_TREE_URL:
         description: Device Tree URL
         required: true
@@ -22,15 +22,15 @@ on:
       DEVICE_TREE_BRANCH:
         description: Device Tree Branch
         required: true
-        default: android-12.1
+        default: cos-9.0-twrp
       DEVICE_PATH:
         description: Path the device tree should be synced to, relative to source root
         required: true
-        default: device/asus/I003D
+        default: device/oppo/CPH2083
       DEVICE_NAME:
         description: Device Name from tree (should match name on twrp_<DEVICE_NAME>.mk)
         required: true
-        default: I003D
+        default: CPH2083
       REPOPICK_PATCHES:
         description: (Optional) Gerrit commit numbers separated by a space to be included in the build (leave blank if not using)
         type: string
