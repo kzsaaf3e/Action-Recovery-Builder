@@ -1,4 +1,4 @@
-name: CPH2083 ( Oppo A12 ) Recovery Build
+name: CPH2083 ( Oppo A12 ) Recovery Build ( TWRP )
 
 on:
   workflow_dispatch:
