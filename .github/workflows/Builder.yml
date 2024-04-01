@@ -6,11 +6,11 @@ on:
       MANIFEST_URL:
         description: 'MANIFEST_URL'
         required: true
-        default: 'https://github.com/SHRP-Reborn/manifest'
+        default: 'https://github.com/SHRP/manifest'
       MANIFEST_BRANCH:
         description: 'MANIFEST_BRANCH'
         required: true
-        default: 'shrp-9.0'
+        default: 'v3_9.0'
       DEVICE_TREE_URL:
         description: 'DEVICE_TREE_URL'
         required: true
