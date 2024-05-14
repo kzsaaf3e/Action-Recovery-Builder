@@ -12,7 +12,7 @@ on:
       MANIFEST_BRANCH:
         description: 'OrangeFox Manifest Branch'
         required: true
-        default: '12.1'
+        default: '11.0'
         type: choice
         options:
         - 12.1
@@ -20,19 +20,19 @@ on:
       DEVICE_TREE:
         description: 'OrangeFox Device Tree'
         required: true
-        default: 'https://github.com/cd-Crypton/custom_recovery_tree_realme_nashc'
+        default: 'https://github.com/kzsaaf3e/twrp_device_oppo_CPH2083'
       DEVICE_TREE_BRANCH:
         description: 'OrangeFox Device Tree Branch'
         required: true
-        default: 'android-12.1'
+        default: 'cos-9.0-orfox'
       DEVICE_PATH:
         description: 'Specify your Device Path'
         required: true
-        default: 'device/realme/nashc'
+        default: 'device/oppo/CPH2083'
       DEVICE_NAME:
         description: 'Specify your Device Codename'
         required: true
-        default: 'nashc'
+        default: 'CPH2083'
       BUILD_TARGET:
         description: 'Specify your Build Target'
         required: true
@@ -60,7 +60,7 @@ jobs:
 
         # Sending the curl request: 
         curl -X POST -H 'Content-Type: application/json' \
-        -d '{"chat_id": "-1002082174650", "text": "New TWRP Will Be Build : by https://github.com/${{ github.actor }}"}' \
+        -d '{"message_thread_id": "3298", chat_id": "-1001805014416", "text": "New TWRP Will Be Build : by https://github.com/${{ github.actor }}"}' \
         https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage
         
     - name: Checkout
@@ -106,7 +106,7 @@ jobs:
 
         # Sending the curl request: 
         curl -X POST -H 'Content-Type: application/json' \
-        -d '{"chat_id": "-1002082174650", "text": "New TWRP Will Be Build : by https://github.com/${{ github.actor }} > Building Start"}' \
+        -d '{"message_thread_id": "3298", chat_id": "-1001805014416", "text": "New TWRP Will Be Build : by https://github.com/${{ github.actor }} > Building Start"}' \
         https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage
 
     - name: Building OrangeFox
@@ -144,6 +144,6 @@ jobs:
 
         # Sending the curl request: 
         curl -X POST -H 'Content-Type: application/json' \
-        -d '{"chat_id": "-1002082174650", "text": "Succesed, Click To Download & Test", "reply_markup": {"inline_keyboard": [[{"text":"Download Here : ${{ github.run_id }}", "url": "https://github.com/Massatrio16/OrangeFox-Action-Build/releases/download/${{ github.run_id }}/OrangeFox-OrangeFox-Unofficial-${{ inputs.DEVICE_NAME }}.img"}]]} }' \
+        -d '{"message_thread_id": "3298", chat_id": "-1001805014416", "text": "Succesed, Click To Download & Test", "reply_markup": {"inline_keyboard": [[{"text":"Download Here : ${{ github.run_id }}", "url": "https://github.com/Massatrio16/OrangeFox-Action-Build/releases/download/${{ github.run_id }}/OrangeFox-OrangeFox-Unofficial-${{ inputs.DEVICE_NAME }}.img"}]]} }' \
         https://api.telegram.org/bot$TELEGRAM_BOT_TOKEN/sendMessage
         
